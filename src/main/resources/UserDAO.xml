@@ -3,10 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.epam.horserace.dao.UsersDAO" id="usersDAO" autowire="byName">
+    <bean class="com.epam.horserace.dao.UserDao" id="UserDao" autowire="byName">
         <property name="queryGetByID">
             <value>
-                <![CDATA[SELECT * FROM `user` WHERE userID=:USER_ID]]>
+                <![CDATA[SELECT * FROM `users` WHERE id_user=:USER_ID]]>
+            </value>
+        </property>
+
+        <property name="queryGetByName">
+            <value>
+                <![CDATA[SELECT * FROM `users` WHERE name=:USER_NAME]]>
+            </value>
+        </property>
+
+        <property name="queryCreateUser">
+            <value>
+                <![CDATA[SELECT * FROM `users` WHERE name=:USER_NAME]]>
             </value>
         </property>
     </bean>
