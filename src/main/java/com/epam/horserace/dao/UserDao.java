@@ -14,7 +14,7 @@ public class UserDao extends AbstractDao{
         super(new UserMapper());
     }
 
-    public List<UserEntity> getUser(int id){
+    public List<UserEntity> getUser(Long id){
         return search(queryGetByID, new Arguments(UserTable.USER_ID, id));
     }
 

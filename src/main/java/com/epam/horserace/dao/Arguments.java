@@ -14,7 +14,6 @@ public final class Arguments {
 
     public Arguments(final AbstractTable column, final Object value) {
         this();
-
         add(column, value);
     }
 
