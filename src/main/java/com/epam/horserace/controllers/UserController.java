@@ -20,8 +20,8 @@ public class UserController {
 
     @RequestMapping(value = "/getUserByID", method = RequestMethod.GET)
     public final ModelAndView getUserByID(@RequestParam("id") Long id) {
-        ModelAndView mv = new ModelAndView("../index.html");
-        for (UserEntity user: userService.getUserByID(id)) {
+        ModelAndView mv = new ModelAndView("../index.jsp");
+        for (UserEntity user : userService.getUserByID(id)) {
             mv.addObject("user", user.name);
         }
         return mv;
@@ -29,8 +29,8 @@ public class UserController {
 
     @RequestMapping(value = "/getUser", method = RequestMethod.GET)
     public final ModelAndView getUserByName(@RequestParam("name") String name) {
-        ModelAndView mv = new ModelAndView("../index.html");
-        for (UserEntity user: userService.getUserByName(name)) {
+        ModelAndView mv = new ModelAndView("/index.jsp");
+        for (UserEntity user : userService.getUserByName(name)) {
             mv.addObject("user", user.surname);
         }
         return mv;
@@ -40,7 +40,7 @@ public class UserController {
     public final long createUser(@RequestParam("name") String name,
                                  @RequestParam("surname") String surname,
                                  @RequestParam("password") String password,
-                                 @RequestParam("email") String email){
-           return userService.create(name, surname, password, email);
+                                 @RequestParam("email") String email) {
+        return userService.create(name, surname, password, email);
     }
 }
