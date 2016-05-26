@@ -5,3 +5,27 @@ h2{
 h4{
 	color:red;
 }
+
+.login{
+    padding:6px 12px;
+    margin-top: 4px;
+    font-size:15px;
+    font-weight:400;
+    border-radius:5px;
+    color: white;
+    text-align:center;
+    background-color: #39C2D7;
+    display: inline-block;
+}
+
+.registration-button{
+    padding:6px 12px;
+    margin-top: 4px;
+    font-size:15px;
+    font-weight:400;
+    border-radius:5px;
+    color: white;
+    text-align:center;
+    background-color: #39C2D7;
+    display: inline-block;
+}

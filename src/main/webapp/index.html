@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="./angular/main.js"></script>
+
+        <script src="./angular/controllers/LoginController.js"></script>
+        <script src="./angular/controllers/RegistrationController.js"></script>
+    <body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        {{ firstName + " " + lastName }}
+    </div>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.firstName = "John";
+            $scope.lastName = "Doe";
+        });
+    </script>
+    </body>
+</html>
